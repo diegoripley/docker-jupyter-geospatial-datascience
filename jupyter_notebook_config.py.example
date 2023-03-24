@@ -1,0 +1,2 @@
+# https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#preparing-a-hashed-password
+c.NotebookApp.password = u''

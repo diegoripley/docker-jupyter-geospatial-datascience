@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  jupyter-geospatial:
+    container_name: jupyter-geospatial
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8889:8888
+    volumes:
+      - ./notebook:/home/jovyan/work
+      - ./jupyter_notebook_config.py:/home/jovyan/.jupyter/jupyter_notebook_config.py
